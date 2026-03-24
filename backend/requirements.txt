@@ -1,0 +1,10 @@
+quart==0.18.1
+python-dotenv==1.0.0
+asyncpg==0.29.0
+sqlalchemy==2.0.23
+quart-auth==0.10.1
+bcrypt==4.1.2
+hypercorn==0.16.0
+psycopg2-binary==2.9.9
+Werkzeug<3.0.0
+quart-cors==0.7.0
