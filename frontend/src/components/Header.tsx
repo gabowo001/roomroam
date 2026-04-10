@@ -46,7 +46,7 @@ const Header: React.FC<HeaderProps> = ({
         )}
         <div className="connection-status">
           <span className={`status-indicator ${isConnected ? 'connected' : 'disconnected'}`}></span>
-          {isConnected ? 'Connected' : 'Connecting...'}
+          <span>{isConnected ? 'Online' : 'Connecting...'}</span>
         </div>
       </div>
     </div>
