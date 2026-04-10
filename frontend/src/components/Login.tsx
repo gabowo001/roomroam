@@ -46,49 +46,56 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
   return (
     <div className="auth-container">
       <div className="auth-form">
-        <h2>{isLogin ? 'Login' : 'Register'}</h2>
-        
+        <h2>{isLogin ? 'Welcome Back' : 'Create Account'}</h2>
+        <p className="auth-subtitle">
+          {isLogin
+            ? 'Sign in to continue to RoomRoam'
+            : 'Join RoomRoam and start chatting'}
+        </p>
+
         {error && <div className="error-message">{error}</div>}
-        
+
         <form onSubmit={handleSubmit}>
           <div className="form-group">
+            <label className="form-label">Username</label>
             <input
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              placeholder="Username"
+              placeholder="Enter your username"
               required
               className="auth-input"
             />
           </div>
-          
+
           <div className="form-group">
+            <label className="form-label">Password</label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Password"
+              placeholder="Enter your password"
               required
               className="auth-input"
             />
           </div>
-          
+
           <button type="submit" disabled={loading} className="auth-button">
-            {loading ? 'Loading...' : (isLogin ? 'Login' : 'Register')}
+            {loading ? 'Loading...' : (isLogin ? 'Sign In' : 'Create Account')}
           </button>
         </form>
-        
+
         <div className="auth-toggle">
           <p>
             {isLogin
               ? "Don't have an account? "
               : "Already have an account? "}
-            <button 
-              type="button" 
+            <button
+              type="button"
               onClick={() => setIsLogin(!isLogin)}
               className="auth-toggle-button"
             >
-              {isLogin ? 'Register' : 'Login'}
+              {isLogin ? 'Sign Up' : 'Sign In'}
             </button>
           </p>
         </div>
