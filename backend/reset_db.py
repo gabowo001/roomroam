@@ -4,6 +4,9 @@
 from models import Base, get_db_session
 from sqlalchemy import create_engine
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 DATABASE_URL = os.environ.get('DATABASE_URL', 'postgresql://postgres:postgres@localhost:5432/postgres')
 

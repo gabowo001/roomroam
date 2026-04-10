@@ -7,6 +7,9 @@ from datetime import datetime
 from models import get_db_session, init_db, User, Group, Message
 from sqlalchemy import func
 import random
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Create Quart app
 app = Quart(__name__)
