@@ -21,7 +21,7 @@ export class WebSocketManager {
   private setupWebSocket(): void {
     // Determine the WebSocket URL based on current location
     const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    const wsUrl = `${protocol}//${window.location.hostname}:5000/ws`;
+    const wsUrl = `${protocol}//${window.location.host}/ws`;
     
     try {
       this.ws = new WebSocket(wsUrl);

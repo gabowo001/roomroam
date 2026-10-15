@@ -7,6 +7,7 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',  // bind to all interfaces so the host can reach it via VM IP
     port: 3000,
+    allowedHosts: true,
     proxy: {
       '/api': {
         target: 'http://127.0.0.1:5000',
